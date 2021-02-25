@@ -9,13 +9,15 @@ import javax.inject.Provider
 
 typealias ViewModelMap = Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>
 
+@ContributesBinding(AppScope::class)
 class MultiBindingViewModelFactory @Inject constructor(
-    private val map: ViewModelMap
+    private val viewModelComponent: Provider<ViewModelComponent.Factory>,
 ) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return map[modelClass]?.get() as? T?
+        val viewModelMap = viewModelComponent.get().create().getViewModelMap()
+        return viewModelMap[modelClass]?.get() as? T?
             ?: throw IllegalStateException("Could not create ViewModel of type $modelClass")
     }
 }

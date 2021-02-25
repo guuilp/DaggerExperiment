@@ -1,6 +1,6 @@
 package com.github.guuilp.daggerexperiment.di
 
-import com.github.guuilp.daggerexperiment.di.core.MultiBindingViewModelFactory
+import com.github.guuilp.daggerexperiment.di.core.ViewModelMap
 import com.github.guuilp.daggerexperiment.di.core.ViewModelScope
 import com.github.guuilp.daggerexperiment.di.core.ViewModelScoped
 import com.squareup.anvil.annotations.MergeSubcomponent
@@ -10,10 +10,10 @@ import dagger.Subcomponent
 @ViewModelScoped
 interface ViewModelComponent {
 
-    fun getViewModelFactory(): MultiBindingViewModelFactory
+    fun getViewModelMap(): ViewModelMap
 
-    @Subcomponent.Builder
-    interface Builder {
-        fun build(): ViewModelComponent
+    @Subcomponent.Factory
+    interface Factory {
+        fun create(): ViewModelComponent
     }
 }

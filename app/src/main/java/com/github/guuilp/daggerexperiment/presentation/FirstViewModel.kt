@@ -6,7 +6,7 @@ import com.github.guuilp.daggerexperiment.domain.FirstUseCase
 import com.github.guuilp.daggerexperiment.domain.SecondUseCase
 import javax.inject.Inject
 
-class ExampleViewModel @Inject constructor(
+class FirstViewModel @Inject constructor(
     private val firstUseCase: FirstUseCase,
     private val secondUseCase: SecondUseCase
 ): ViewModel() {

@@ -3,7 +3,7 @@ package com.github.guuilp.daggerexperiment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentFactory
-import com.github.guuilp.daggerexperiment.view.ExampleFragment
+import com.github.guuilp.daggerexperiment.view.FirstFragment
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, ExampleFragment::class.java, null)
+                .replace(R.id.container, FirstFragment::class.java, null)
                 .commit()
         }
     }

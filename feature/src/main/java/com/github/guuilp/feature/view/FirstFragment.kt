@@ -8,13 +8,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.github.guuilp.core_di.AppScope
+import com.github.guuilp.core_di.FragmentKey
 import com.github.guuilp.feature.R
+import com.github.guuilp.feature.analytics.ExampleAnalytics
 import com.github.guuilp.feature.databinding.FirstFragmentBinding
 import com.github.guuilp.feature.presentation.FirstViewModel
+import com.squareup.anvil.annotations.ContributesMultibinding
 import javax.inject.Inject
 
+@ContributesMultibinding(AppScope::class)
+@FragmentKey(FirstFragment::class)
 class FirstFragment @Inject constructor(
-    private val viewModelFactory: ViewModelProvider.Factory
+    private val viewModelFactory: ViewModelProvider.Factory,
 ) : Fragment() {
 
     private val viewModel by viewModels<FirstViewModel> { viewModelFactory }

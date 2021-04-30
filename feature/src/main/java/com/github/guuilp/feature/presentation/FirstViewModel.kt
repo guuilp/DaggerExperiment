@@ -12,7 +12,7 @@ class FirstViewModel @Inject constructor(
 ) : ViewModel() {
 
     fun exampleFunction() {
-        Log.d("FUN_CALLED", "ExampleViewModel.exampleFunction")
+        Log.d("FUN_CALLED", "FirstViewModel.exampleFunction")
 
         firstUseCase.exampleFunction()
         secondUseCase.exampleFunction()

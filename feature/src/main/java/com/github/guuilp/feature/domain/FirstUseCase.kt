@@ -20,7 +20,7 @@ class FirstUseCaseImpl @Inject constructor(
     }
 
     override fun exampleFunction() {
-        Log.d("FUN_CALLED", "ExampleUseCaseImpl.exampleFunction")
+        Log.d("FUN_CALLED", "FirstUseCaseImpl.exampleFunction")
 
         exampleRepository.exampleFunction()
     }

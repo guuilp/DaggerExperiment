@@ -1,13 +1,16 @@
 package com.github.guuilp.daggerexperiment.di
 
-import com.github.guuilp.daggerexperiment.di.core.ViewModelMap
-import com.github.guuilp.daggerexperiment.di.core.ViewModelScope
-import com.github.guuilp.daggerexperiment.di.core.ViewModelScoped
+import androidx.lifecycle.ViewModel
+import com.github.guuilp.core_di.ViewModelScope
+import com.github.guuilp.core_di.ViewModelScoped
 import com.squareup.anvil.annotations.MergeSubcomponent
 import dagger.Subcomponent
+import javax.inject.Provider
 
-@MergeSubcomponent(ViewModelScope::class)
+typealias ViewModelMap = Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>
+
 @ViewModelScoped
+@MergeSubcomponent(ViewModelScope::class)
 interface ViewModelComponent {
 
     fun getViewModelMap(): ViewModelMap

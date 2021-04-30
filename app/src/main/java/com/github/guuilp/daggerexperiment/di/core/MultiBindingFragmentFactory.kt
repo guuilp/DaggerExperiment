@@ -2,6 +2,7 @@ package com.github.guuilp.daggerexperiment.di.core
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
+import com.github.guuilp.core_di.AppScope
 import com.squareup.anvil.annotations.ContributesBinding
 import javax.inject.Inject
 import javax.inject.Provider

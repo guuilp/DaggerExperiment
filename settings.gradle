@@ -1,2 +1,4 @@
+include ':core-di'
+include ':feature'
 include ':app'
 rootProject.name = "DaggerExperiment"

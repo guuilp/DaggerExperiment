@@ -1,6 +1,6 @@
 package com.github.guuilp.daggerexperiment.di
 
-import com.github.guuilp.daggerexperiment.di.core.AppScope
+import com.github.guuilp.core_di.AppScope
 import com.squareup.anvil.annotations.ContributesTo
 import dagger.Module
 

@@ -21,6 +21,7 @@ import javax.inject.Inject
 @FragmentKey(FirstFragment::class)
 class FirstFragment @Inject constructor(
     private val viewModelFactory: ViewModelProvider.Factory,
+    private val analytics: ExampleAnalytics
 ) : Fragment() {
 
     private val viewModel by viewModels<FirstViewModel> { viewModelFactory }
@@ -39,6 +40,8 @@ class FirstFragment @Inject constructor(
         super.onViewCreated(view, savedInstanceState)
 
         Log.d("FUN_CALLED", "FirstFragment.onViewCreated")
+
+        analytics.exampleFunction()
 
         viewModel.exampleFunction()
 

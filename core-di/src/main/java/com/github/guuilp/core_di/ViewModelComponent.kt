@@ -1,4 +1,4 @@
-package com.github.guuilp.daggerexperiment.di
+package com.github.guuilp.core_di
 
 import androidx.lifecycle.ViewModel
 import com.github.guuilp.core_di.ViewModelScope

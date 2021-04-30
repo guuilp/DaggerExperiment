@@ -3,10 +3,9 @@ package com.github.guuilp.daggerexperiment.di.core
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.github.guuilp.core_di.AppScope
-import com.github.guuilp.daggerexperiment.di.ViewModelComponent
+import com.github.guuilp.core_di.ViewModelComponent
 import com.squareup.anvil.annotations.ContributesBinding
 import javax.inject.Inject
-import javax.inject.Provider
 
 @ContributesBinding(AppScope::class)
 class MultiBindingViewModelFactory @Inject constructor(
